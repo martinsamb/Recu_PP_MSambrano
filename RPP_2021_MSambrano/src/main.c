@@ -40,7 +40,7 @@ int main(void)
 	do
 	{
 		menuPrincipal();
-		if(!utn_getNumero(&option,"\nElija una Opcion del Menu[1-7]:","\nError",1,7,2))
+		if(!utn_getNumero(&option,"\nElija una Opcion del Menu[1-9]:","\nError",1,9,2))
 		{
 			switch(option)
 			{
@@ -98,14 +98,29 @@ int main(void)
 				info_ServiciosPrestados(arrayTrabajo, QTY_TRABAJO,arrayServicio, QTY_SERVICIO);
 				break;
 
-			case 7: //Salir
-				//servicio_totalPesos(arrayServicio, QTY_SERVICIO, auxID, arrayTrabajo, QTY_TRABAJO);
+			case 7://Total servicios
+				if(trabajo_arrayVacio(arrayTrabajo, QTY_TRABAJO))
+				{
+					printf("Aun no tiene trabajo dados de alta\n");
+				}
+				else
+				{
+					info_ordenarTrabajoMarca(arrayTrabajo, QTY_TRABAJO, ORDEN_ASC);
+				}
+				trabajo_imprimirArray(arrayTrabajo, QTY_TRABAJO, arrayServicio, QTY_SERVICIO);
+				break;
+
+			case 8://Total servicios
+				info_mayorServicios(arrayTrabajo, QTY_TRABAJO, arrayServicio, QTY_SERVICIO);
+				break;
+
+			case 9: //Salir
 				break;
 			default:
 				printf("\nOpcion no valida");
 			}
 		}
-	}while(option != 7);
+	}while(option != 9);
 
 
 	return EXIT_SUCCESS;

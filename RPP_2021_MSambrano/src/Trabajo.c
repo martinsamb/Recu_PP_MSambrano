@@ -459,7 +459,9 @@ void menuPrincipal()
     printf("4 - Lista trabajo \n");
     printf("5 - Lista servicio \n");
     printf("6 - Total servicios\n");
-    printf("7 - Salir\n");
+    printf("7 - OrdenarTrabajoMarca \n");
+    printf("8 - Total servicios\n");
+    printf("9 - Salir\n");
 
 }
 

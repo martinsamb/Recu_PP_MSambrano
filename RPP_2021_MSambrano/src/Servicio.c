@@ -180,4 +180,41 @@ int servicio_arrayVacio(Servicio *pArray, int len)
 	return retorno;
 }
 
+//************************************************************************************
+/*
+int servicio_descripcioPorId(Servicio* pArrayS,int lenS,int id_buscado, char *cadena)
+{
+    int retorno=-1;
+    for (int i=0;i <lenS; i++)
+    {
+		if( id_buscado == pArrayS[i].id)
+		{
+		   strcpy(cadena, pArrayS[i].descripcion);
+		   break;
+		}
+    }
+	return retorno;
+}
+*/
 
+//************************************************************************************
+
+int servicio_descripcionPorId(int idBuscado, Servicio *pArrayS, int lenS,char *descripcion)
+{
+	int retorno = -1;
+	int i;
+
+	if (pArrayS != NULL && lenS > 0 && descripcion != NULL)
+	{
+		for (i = 0; i < lenS; i++)
+		{
+			if (pArrayS[i].id == idBuscado)
+			{
+				strncpy(descripcion, pArrayS[i].descripcion, 20);
+				retorno = 0;
+				break;
+			}
+		}
+	}
+	return retorno;
+}

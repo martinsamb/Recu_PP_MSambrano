@@ -34,7 +34,7 @@ int main(void)
 	trabajo_inicializarArray(arrayTrabajo, QTY_TRABAJO);
 
 	//harcodear
-	Servicio arrayServicio[]={ { 20000, "Limpieza", 250 , 0 }, { 20001, "Parche", 300 , 0 }, { 20002, "Centrado", 400 , 0 }, { 20003, "Centrado", 350 , 0 } };
+	Servicio arrayServicio[]={ { 20000, "Limpieza", 250 , 0 }, { 20001, "Parche", 300 , 0 }, { 20002, "Centrado", 400 , 0 }, { 20003, "Cadena", 350 , 0 } };
 	/*Trabajo arrayTrabajo[]={{1,"Trek",26,20000,{4,4,2020},0},{2,"Specialized",26,20001,{5,5,2020},0},{3,"Giant",26,20002,{2,9,2020},0},
 							{4,"Cannondale",26,20003,{6,2,2021},0}};*/
 	do
@@ -111,7 +111,7 @@ int main(void)
 				break;
 
 			case 8://Total servicios
-				info_mayorServicios(arrayTrabajo, QTY_TRABAJO, arrayServicio, QTY_SERVICIO);
+				info_serviciosMasTrabajos(arrayServicio, QTY_SERVICIO,arrayTrabajo, QTY_TRABAJO);
 				break;
 
 			case 9: //Salir

@@ -38,3 +38,5 @@ int servicio_ordenarID(Servicio* pArray,int len);
 
 int servicio_arrayVacio(Servicio *pArray, int len);
 
+int servicio_descripcionPorId(int idBuscado, Servicio *pArrayS, int lenS,char *descripcion);
+

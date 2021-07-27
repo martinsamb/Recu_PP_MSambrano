@@ -14,8 +14,6 @@
 #include "utn.h"
 #define LEN_MAXIMO 21
 
-void tituloServicio();
-int imprimeUnServicio(Servicio *pArrayS, int posicion);
 
 int info_ServiciosPrestados(Trabajo *pArray,int len, Servicio *pArrayS,int lenS)
 {

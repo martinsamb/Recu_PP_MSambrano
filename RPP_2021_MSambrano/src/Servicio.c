@@ -180,25 +180,6 @@ int servicio_arrayVacio(Servicio *pArray, int len)
 	return retorno;
 }
 
-//************************************************************************************
-/*
-int servicio_descripcioPorId(Servicio* pArrayS,int lenS,int id_buscado, char *cadena)
-{
-    int retorno=-1;
-    for (int i=0;i <lenS; i++)
-    {
-		if( id_buscado == pArrayS[i].id)
-		{
-		   strcpy(cadena, pArrayS[i].descripcion);
-		   break;
-		}
-    }
-	return retorno;
-}
-*/
-
-//************************************************************************************
-
 int servicio_descripcionPorId(int idBuscado, Servicio *pArrayS, int lenS,char *descripcion)
 {
 	int retorno = -1;
@@ -216,5 +197,28 @@ int servicio_descripcionPorId(int idBuscado, Servicio *pArrayS, int lenS,char *d
 			}
 		}
 	}
+	return retorno;
+}
+
+void servicio_imprimirTitulo()
+{
+	printf("\n%10s","ID - ");
+	printf("%20s","Descripcion - ");
+	printf("%20s","Precio - ");
+}
+
+int servicio_imprimirContenido(Servicio *pArrayS, int posicion)
+{
+	int retorno = -1;
+
+	if(pArrayS != NULL && posicion > -1)
+	{
+		printf("\n%10d - ",pArrayS[posicion].id);
+		printf("%20s - ",pArrayS[posicion].descripcion);
+		printf("%20.2f - ",pArrayS[posicion].precio);
+
+		retorno = 0;
+	}
+
 	return retorno;
 }

@@ -40,3 +40,7 @@ int servicio_arrayVacio(Servicio *pArray, int len);
 
 int servicio_descripcionPorId(int idBuscado, Servicio *pArrayS, int lenS,char *descripcion);
 
+void servicio_imprimirTitulo();
+
+int servicio_imprimirContenido(Servicio *pArrayS, int posicion);
+
